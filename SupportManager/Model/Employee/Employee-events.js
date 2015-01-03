@@ -1,0 +1,1 @@
+﻿model.Employee.fullName.onGet = function() {	return this.firstName + " " + this.lastName;};

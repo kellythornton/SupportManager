@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<directory>
-	<group ID="01000000000000000000000000000000" name="Admin">
-	</group>
-</directory>
-
+﻿<?xml version="1.0" encoding="UTF-8"?><directory>	<group ID="01000000000000000000000000000000" name="Admin">	</group>	<group ID="472F114FD09642C79712394B6096E032" name="User"/>	<group ID="CCB49B4FD27440EFABD980FF3F360803" name="Guest"/>	<user ID="3ADD246405BA4FE4BEB9CC816DADDE93" name="Kelly" fullName="Kelly Thornton" password="2db1c0a0292fe000bb488d2830268b37"/></directory>
