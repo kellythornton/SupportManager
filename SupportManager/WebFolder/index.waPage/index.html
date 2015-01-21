@@ -11,20 +11,37 @@
 		<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
 		<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
 <meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
+
 </head>
-	<body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-workspace-device="desktop" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-title="Main Page" data-theme="default" data-rpc-validation="false" data-rpc-namespace="rpc" data-rpc-activate="false" data-platform="desktop" data-lib="WAF" data-group="[]" data-entire-model="false" data-apple-meta-tags-status-bar="default" style="bottom:;right:;visibility:hidden;">
-		<div id="cntMain" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-container waf-container-level-0 waf-level-0">
+	<body onresize="centerPage()" id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-workspace-device="desktop" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-title="Main Page" data-theme="default" data-rpc-validation="false" data-rpc-namespace="rpc" data-rpc-activate="false" data-platform="desktop" data-lib="WAF" data-group="[]" data-entire-model="false" data-apple-meta-tags-status-bar="default" style="bottom:;right:;visibility:hidden;">
+	
+<div id="cntMain" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-container waf-container-level-0 waf-level-0">
 	 	 	<div id="picGNWLogo" data-type="image" data-target="_blank" data-src="/images/gnwlogo.png" data-lib="WAF" data-label-position="left" data-label="" data-fit="0" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-image"></div> 	 	
 	<iFrame src="/home.waPage/" id="ifMain"></iFrame>
 
-<div id="txtFooter" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="false" class="waf-widget waf-richText">Copyright: Great Northwest Insurance Company, 2014.  (208) 451-7149.</div>
- 	 		<button id="btnHome" data-type="button" data-text="Home" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button"></button>
- 	 		<button id="btnProjects" data-type="button" data-text="Projects" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button"></button>
- 	 		<button id="btnTickets" data-type="button" data-text="Tickets" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button"></button>
- 	 		<button id="btnEmployees" data-type="button" data-text="Employees" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button"></button>
- 	 		<div id="login" data-type="login" data-lib="WAF" data-user-label="User: " data-password-label="Password: " data-login-button="Login" data-login-title="Login Dialog" data-user-display="Signed in as " data-login-action="Login" data-logout-action="Logout" class="waf-widget waf-login" data-constraint-left="true" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="false" data-no-user-display="Please Sign in"></div>
+<div id="txtFooter" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="false" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="true" data-autoWidth="false" class="waf-widget waf-richText">Copyright: Great Northwest Insurance Company, 2014.  (208) 451-7149.</div>
+ 	 		<button tabindex="1" id="btnHome" data-type="button" data-text="Home" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button"></button>
+ 	 		<button tabindex="2" id="btnProjects" data-type="button" data-text="Projects" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button"></button>
+ 	 		<button tabindex="3" id="btnTickets" data-type="button" data-text="Tickets" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button"></button>
+ 	 		<div id="txtSignedInAs" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="false" class="waf-widget waf-richText"></div>
+ 	 		<div id="login" data-user-label="User: " data-user-display="Signed in as " data-type="login" data-password-label="Password: " data-logout-action="Logout" data-login-title="Login Dialog" data-login-button="Login" data-login-action="Login" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-login"></div>
  	 	</div>
-		
+
+<!-- Center the application when the window is resized -->
+<script>
+function centerPage() {
+
+// Check to see if window width is greater than application width and if so center the application
+
+userWidth = $(window).width();
+leftMargin = (userWidth - 1024)/2; 
+
+if (userWidth &gt; 1024){
+$('#cntMain').css ("left", leftMargin);
+}
+}
+</script>
 		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
+
 	</body>
 </html>

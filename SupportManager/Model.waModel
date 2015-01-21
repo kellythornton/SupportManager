@@ -1,1 +1,230 @@
-﻿{	"toJSON": true,	"extraProperties": {		"version": "2",		"classes": {			"Employee": {				"panelColor": "#BFBFBF",				"panel": {					"isOpen": "true",					"pathVisible": true,					"position": {						"X": 25,						"Y": 20					}				}			},			"Project": {				"panelColor": "#7F7F7F",				"panel": {					"isOpen": "true",					"pathVisible": true,					"position": {						"X": 498,						"Y": 25					}				}			},			"Ticket": {				"panelColor": "#fff",				"panel": {					"isOpen": "true",					"pathVisible": true,					"position": {						"X": 500,						"Y": 422					}				}			}		},		"model": {			"scriptMode": "manual",			"workspaceLeft": 0,			"workspaceTop": 0,			"lastScriptLocation": {				"Employee": {					"computed": "Employee/Employee-events.js"				}			}		}	},	"dataClasses": [		{			"name": "Employee",			"className": "Employee",			"collectionName": "EmployeeCollection",			"scope": "public",			"attributes": [				{					"name": "firstName",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "lastName",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "phoneNumber",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "extension",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "email",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "title",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "password",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "role",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "project",					"kind": "relatedEntities",					"scope": "public",					"type": "ProjectCollection",					"reversePath": true,					"path": "employee"				},				{					"name": "ticket",					"kind": "relatedEntities",					"scope": "public",					"type": "TicketCollection",					"reversePath": true,					"path": "employee"				},				{					"name": "EmployeeID",					"kind": "storage",					"scope": "public",					"unique": true,					"autosequence": true,					"type": "long",					"primKey": true				},				{					"name": "fullName",					"kind": "calculated",					"scope": "public",					"type": "string",					"scriptKind": "javascript",					"onGet": [						{							"from": "$mainModel.Employee.fullName.onGet",							"userDefined": true						}					]				}			]		},		{			"name": "Project",			"className": "Project",			"collectionName": "ProjectCollection",			"scope": "public",			"attributes": [				{					"name": "summary",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "description",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "assignedTo",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "createdBy",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "status",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "createdDate",					"kind": "storage",					"scope": "public",					"type": "date",					"simpleDate": false				},				{					"name": "dueDate",					"kind": "storage",					"scope": "public",					"type": "date",					"simpleDate": false				},				{					"name": "employee",					"kind": "relatedEntity",					"scope": "public",					"type": "Employee",					"path": "Employee"				},				{					"name": "ProjectID",					"kind": "storage",					"scope": "public",					"unique": true,					"autosequence": true,					"type": "long",					"primKey": true				},				{					"name": "notes",					"kind": "storage",					"scope": "public",					"type": "string"				}			]		},		{			"name": "Ticket",			"className": "Ticket",			"collectionName": "TicketCollection",			"scope": "public",			"attributes": [				{					"name": "summary",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "description",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "assignedTo",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "createdBy",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "status",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "createdDate",					"kind": "storage",					"scope": "public",					"type": "date",					"simpleDate": false				},				{					"name": "component",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "type",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "employee",					"kind": "relatedEntity",					"scope": "public",					"type": "Employee",					"path": "Employee"				},				{					"name": "TicketID",					"kind": "storage",					"scope": "public",					"unique": true,					"autosequence": true,					"type": "long",					"primKey": true				},				{					"name": "priority",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "dueDate",					"kind": "storage",					"scope": "public",					"type": "date",					"simpleDate": false				},				{					"name": "notes",					"kind": "storage",					"scope": "public",					"type": "string"				}			]		}	]}
+
+{
+	"toJSON" : true,
+	"extraProperties" : 
+	{
+		"version" : "2",
+		"classes" : 
+		{
+			"Project" : 
+			{
+				"panelColor" : "#7F7F7F",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 498,
+						"Y" : 25
+					}
+				}
+			},
+			"Ticket" : 
+			{
+				"panelColor" : "#fff",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 186,
+						"Y" : 30
+					}
+				}
+			}
+		},
+		"model" : 
+		{
+			"scriptMode" : "manual",
+			"workspaceLeft" : 24,
+			"workspaceTop" : 3,
+			"lastScriptLocation" : 
+			{
+			}
+		}
+	},
+	"dataClasses" : 
+	[
+		{
+			"name" : "Project",
+			"className" : "Project",
+			"collectionName" : "ProjectCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ProjectID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
+				},
+				{
+					"name" : "summary",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "description",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "assignedTo",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "createdBy",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "status",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "createdDate",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "dueDate",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "date",
+					"simpleDate" : false
+				},
+				{
+					"name" : "notes",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "files",
+					"kind" : "storage",
+					"matchColumn" : "file",
+					"scope" : "public",
+					"type" : "string"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ProjectID"
+				}
+			]
+		},
+		{
+			"name" : "Ticket",
+			"className" : "Ticket",
+			"collectionName" : "TicketCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "TicketID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
+				},
+				{
+					"name" : "summary",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "description",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "assignedTo",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "createdBy",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "status",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "createdDate",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "component",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "type",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "priority",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "dueDate",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "date",
+					"simpleDate" : false
+				},
+				{
+					"name" : "notes",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "files",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "TicketID"
+				}
+			]
+		}
+	]
+}

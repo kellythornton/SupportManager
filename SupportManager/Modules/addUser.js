@@ -1,0 +1,1 @@
+﻿exports.addNewUser = function addNewUser() {var newUser = directory.addUser("Joe@email.com", "1234", "Joe Barnes");directory.save();return ('User Saved');};

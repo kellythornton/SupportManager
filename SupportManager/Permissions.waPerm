@@ -1,1 +1,26 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><permissions></permissions>
+﻿<?xml version="1.0" encoding="UTF-8"?><permissions>
+	<allow action="read" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Employee" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="create" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Employee" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="update" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Employee" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="remove" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Employee" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="describe" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Employee" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="execute" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Employee" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="promote" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Employee" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="read" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Project" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="create" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Project" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="update" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Project" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="remove" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Project" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="describe" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Project" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="execute" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Project" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="promote" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Project" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="read" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Ticket" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="create" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Ticket" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="update" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Ticket" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="remove" groupName="Admin" groupID="01000000000000000000000000000000" resource="Model.Ticket" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="describe" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Ticket" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="execute" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Ticket" temporaryForcePermissions="false" type="dataClass"/>
+	<allow action="promote" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="Model.Ticket" temporaryForcePermissions="false" type="dataClass"/>
+	<allow type="module" resource="mail" action="executeFromClient"/>
+	<allow action="upload" groupName="User" groupID="472F114FD09642C79712394B6096E032" resource="upload" temporaryForcePermissions="false" type="service"/>
+	<allow action="upload" groupName="Admin" groupID="01000000000000000000000000000000" resource="upload" temporaryForcePermissions="false" type="service"/>
+</permissions>

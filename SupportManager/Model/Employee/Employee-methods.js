@@ -1,0 +1,1 @@
+﻿model.Employee.entityMethods.validatePassword = function() {	// Add your code here;};
